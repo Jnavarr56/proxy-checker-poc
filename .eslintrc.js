@@ -2,7 +2,7 @@ module.exports = {
 	parser: 'babel-eslint',
 	extends: [
 		'eslint:recommended',
-		'plugin:react/recommended',
+		'plugin:react/recommended'
 		// 'prettier',
 		// 'prettier/react'
 	],
@@ -15,13 +15,13 @@ module.exports = {
 		}
 	},
 	rules: {
-        'comma-dangle': ['warn', 'never'],
-        'object-curly-spacing': ["warn", "always"],
-        'array-bracket-spacing': ["warn", "always"],
-        'comma-spacing': ["warn", { "before": false, "after": true }],
-        'space-in-parens': ["warn", "always"],
-        'array-element-newline': ["warn", "always"],
-        'object-curly-newline': ['warn', 'always'],
+		'comma-dangle': ['warn', 'never'],
+		'object-curly-spacing': ['warn', 'always'],
+		'array-bracket-spacing': ['warn', 'always'],
+		'comma-spacing': ['warn', { before: false, after: true }],
+		'space-in-parens': ['warn', 'always'],
+		'array-element-newline': ['warn', 'always'],
+		'object-curly-newline': ['warn', 'always'],
 		'no-unused-vars': ['off'],
 		'no-unused-vars': ['off'],
 		'react/display-name': ['warn'],
@@ -35,10 +35,10 @@ module.exports = {
 		'react/jsx-curly-spacing': [
 			'warn',
 			{
-                when: 'always',
-                spacing: {
-                    objectLiterals: "never"
-                }
+				when: 'always',
+				spacing: {
+					objectLiterals: 'never'
+				}
 			}
 		],
 		'react/jsx-indent-props': ['warn', 'tab'],
@@ -102,7 +102,7 @@ module.exports = {
 		'react/self-closing-comp': ['warn'],
 		'react/sort-comp': ['off'],
 		'react-hooks/exhaustive-deps': ['warn'],
-        'react/no-unescaped-entities': ['warn'],
+		'react/no-unescaped-entities': ['warn']
 	},
 	env: {
 		browser: true,

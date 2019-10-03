@@ -16,17 +16,24 @@
 		"eslint": "eslint --fix $npm_package_config_fixableFiles"
 	},
 	"lint-staged": {
-		"src/**/*.{js,jsx,json}": "$npm_package_config_precommitActions",
-		"public/**/*.{js,jsx,json}": "$npm_package_config_precommitActions",
-		"*.{js,jsx,json}": "$npm_package_config_precommitActions" 
-	},
-	"config": {
-		"fixableFiles": "*.*(json|js|jsx) src/**/*.*(json|js|jsx) public/**/*.*(json|js|jsx)",
-		"precommitActions": [
+		"src/**/*.{js,jsx,json}": [
+		  "prettier --write",
+		  "eslint --fix",
+		  "git add"
+		],
+		"public/**/*.{js,jsx,json}": [
+			"prettier --write",
+			"eslint --fix",
+			"git add"
+		],
+		"*.{js,jsx,json}": [
 			"prettier --write",
 			"eslint --fix",
 			"git add"
 		]
+	},
+	"config": {
+		"fixableFiles": "*.*(json|js|jsx) src/**/*.*(json|js|jsx) public/**/*.*(json|js|jsx)"
 	},
 	"eslintConfig": {
 		"extends": "react-app"
