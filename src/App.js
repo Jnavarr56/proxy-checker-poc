@@ -1,25 +1,25 @@
 import React from 'react'
-import logo from './logo.svg'
-import './App.css'
+import {
+ BrowserRouter 
+} from 'react-router-dom'
+import {
+ renderRoutes 
+} from 'react-router-config'
+import routes from './routes'
+import {
+ ThemeProvider 
+} from '@material-ui/styles'
+import {
+ createMuiTheme 
+} from '@material-ui/core'
 
 function App() {
+	// console.log(process.env.REACT_APP_COMPANY_AUTOCOMPLETE_API_KEY)
+	//https://github.com/ReactTraining/react-router/tree/master/packages/react-router-config
 	return (
-		<div className="App">
-			<header className="App-header">
-				<img alt="logo" className="App-logo" src={logo} />
-				<p>
-					Edit <code>src/App.js</code> and save to reload.
-				</p>
-				<a
-					className="App-link"
-					href="https://reactjs.org"
-					rel="noopener noreferrer"
-					target="_blank"
-				>
-					Learn React
-				</a>
-			</header>
-		</div>
+		<ThemeProvider theme={ createMuiTheme() }>
+			<BrowserRouter>{renderRoutes( routes )}</BrowserRouter>
+		</ThemeProvider>
 	)
 }
 
