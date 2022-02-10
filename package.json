@@ -8,7 +8,7 @@
 		"@material-ui/lab": "^4.0.0-alpha.28",
 		"@material-ui/styles": "^4.5.0",
 		"clsx": "^1.0.4",
-		"node-sass": "^4.12.0",
+		"node-sass": "^7.0.0",
 		"react": "^16.10.1",
 		"react-dom": "^16.10.1",
 		"react-particles-js": "^2.7.0",
